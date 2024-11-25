@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="formCadastro" class="formulario" onsubmit="return validarFormulario()">
+            <h1>Cadastro de Cliente</h1>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF" oninput="mascaraCPF(event)">
+
+            <label for="dataNascimento">Data de Nascimento</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+
+            <label for="whatsapp">Número do WhatsApp</label>
+            <input type="text" id="whatsapp" name="whatsapp" required placeholder="Digite seu número do WhatsApp" oninput="mascaraWhatsapp(event)">
+
+            <div class="buttons">
+                <button type="submit">Cadastrar</button>
+
+                <!-- Bot�o Voltar ao In�cio -->
+                <a href="index.html">
+                    <button type="button" class="voltar-btn">Voltar ao Início</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

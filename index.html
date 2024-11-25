@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Menu Flutuante</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS externo -->
+    <style>
+        /* Estilos gerais */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            
+        }
+
+        /* Menu flutuante */
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            text-align: center;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+            .menu a {
+                color: white;
+                text-decoration: none;
+                padding: 15px 30px;
+                margin: 0 10px;
+                font-size: 18px;
+                display: inline-block;
+                transition: background-color 0.3s;
+            }
+
+                .menu a:hover {
+                    background-color: #575757;
+                }
+
+        /* Estilos do rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo para o conteúdo da página */
+        .content {
+            padding-top: 80px; /* Espaço para não sobrepor o menu fixo */
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Estilos do iframe */
+        #whatsappIframe {
+            width: 70%; /* WhatsApp ocupa 70% da tela */
+            height: 90vh; /* 90% da altura da tela */
+            border: none;
+            margin-top: 20px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .menu {
+                text-align: left;
+                padding: 10px 15px;
+            }
+
+                .menu a {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                }
+
+            #whatsappIframe {
+                width: 100%; /* Ajuste para telas pequenas */
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Flutuante -->
+    <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="servicos.html">Serviços</a> <!-- Corrigido para caminho relativo -->
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="https://web.whatsapp.com" target="_blank">Chat</a>
+        <a href="Cadastro1.html">Cadastro</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <!-- Iframe para WhatsApp Web -->
+        <iframe id="whatsappIframe" name="whatsappIframe" src="about:blank" style="display: none;"></iframe>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+<!--teste-->
