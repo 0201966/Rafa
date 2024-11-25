@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visualizar Cadastro</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="text"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="text"] {
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        #btnPesquisar {
+            background-color: #007bff;
+            margin-top: 10px;
+        }
+
+            #btnPesquisar:hover {
+                background-color: #0056b3;
+            }
+
+        .voltar-btn {
+            background-color: #f44336;
+            color: white;
+            margin-top: 20px;
+        }
+
+            .voltar-btn:hover {
+                background-color: #d32f2f;
+            }
+
+        /* Estilos para o resultado da pesquisa */
+        #resultadoPesquisa {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            #resultadoPesquisa h2 {
+                color: #333;
+            }
+
+            #resultadoPesquisa p {
+                font-size: 16px;
+                color: #666;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Buscar Cadastro de Cliente</h1>
+
+        <!-- Barra de Pesquisa -->
+        <label for="cpfSearch">Digite o CPF:</label>
+        <input type="text" id="cpfSearch" placeholder="Digite o CPF do cliente">
+
+        <!-- Botão de Pesquisa -->
+        <button type="button" id="btnPesquisar" onclick="buscarCliente()">Pesquisar</button>
+
+        <!-- Resultado da Pesquisa -->
+        <div id="resultadoPesquisa">
+            <!-- Os resultados da pesquisa aparecerão aqui -->
+        </div>
+
+        <div class="buttons">
+            <a href="index.html">
+                <button type="button" class="voltar-btn">Voltar ao Início</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Função para buscar cliente pelo CPF
+        function buscarCliente() {
+            const cpfSearch = document.getElementById('cpfSearch').value.trim();
+            const resultadoPesquisa = document.getElementById('resultadoPesquisa');
+
+            // Limpar resultados anteriores
+            resultadoPesquisa.innerHTML = '';
+
+            if (cpfSearch === '') {
+                resultadoPesquisa.innerHTML = '<p>Por favor, insira um CPF para realizar a busca.</p>';
+                return; // Não faz nada se o campo estiver vazio
+            }
+
+            // Recuperar os clientes salvos no localStorage
+            const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+
+            // Procurar o cliente com o CPF correspondente
+            const clienteEncontrado = clientes.find(cliente => cliente.cpf === cpfSearch);
+
+            if (clienteEncontrado) {
+                // Exibir os dados do cliente
+                resultadoPesquisa.innerHTML = `
+                        <h2>Dados do Cliente</h2>
+                        <p><strong>Nome:</strong> ${clienteEncontrado.nome}</p>
+                        <p><strong>CPF:</strong> ${clienteEncontrado.cpf}</p>
+                        <p><strong>Data de Nascimento:</strong> ${clienteEncontrado.dataNascimento}</p>
+                        <p><strong>Endereço:</strong> ${clienteEncontrado.endereco}</p>
+                        <p><strong>WhatsApp:</strong> ${clienteEncontrado.whatsapp}</p>
+                    `;
+            } else {
+                // Caso não encontre o cliente
+                resultadoPesquisa.innerHTML = `<p>Cadastro não encontrado para o CPF: ${cpfSearch}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

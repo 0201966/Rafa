@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\Cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\cadastro1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cadastro1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\scirpt.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scirpt.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\visualizarcadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:visualizarcadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\servicos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:servicos.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +50,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "visualizarcadastro.html",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\visualizarcadastro.html",
+              "RelativeDocumentMoniker": "visualizarcadastro.html",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\visualizarcadastro.html",
+              "RelativeToolTip": "visualizarcadastro.html",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-25T14:22:29.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "scirpt.js",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\scirpt.js",
+              "RelativeDocumentMoniker": "scirpt.js",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\scirpt.js",
+              "RelativeToolTip": "scirpt.js",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAYwHUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-25T14:18:57.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "servicos.html",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\servicos.html",
+              "RelativeDocumentMoniker": "servicos.html",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\servicos.html",
+              "RelativeToolTip": "servicos.html",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAmwBABAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-25T14:15:17.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "cadastro1.html",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\cadastro1.html",
+              "RelativeDocumentMoniker": "cadastro1.html",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\cadastro1.html",
+              "RelativeToolTip": "cadastro1.html",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAUwHMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-25T14:15:04.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Cadastro.html",
+              "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\Cadastro.html",
+              "RelativeDocumentMoniker": "Cadastro.html",
+              "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\Cadastro.html",
+              "RelativeToolTip": "Cadastro.html",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-25T14:14:57.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\usuario\\Documents\\GitHub\\Rafa\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAG8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-11-25T14:11:25.212Z",
               "EditorCaption": ""

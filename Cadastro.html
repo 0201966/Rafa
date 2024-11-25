@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form id="formCadastro" class="formulario" onsubmit="return validarFormulario()">
+        <form id="formCadastro" class="formulario" onsubmit="return cadastrarCliente(event)">
             <h1>Cadastro de Cliente</h1>
 
             <label for="nome">Nome Completo</label>
@@ -29,8 +29,6 @@
 
             <div class="buttons">
                 <button type="submit">Cadastrar</button>
-
-                <!-- Bot�o Voltar ao In�cio -->
                 <a href="index.html">
                     <button type="button" class="voltar-btn">Voltar ao Início</button>
                 </a>
@@ -38,6 +36,85 @@
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Função para validar o formulário
+        function validarFormulario() {
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const endereco = document.getElementById('endereco').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            if (!nome || !cpf || !dataNascimento || !endereco || !whatsapp) {
+                alert('Todos os campos são obrigatórios!');
+                return false;
+            }
+            return true;
+        }
+
+        // Função para cadastrar o cliente
+        function cadastrarCliente(event) {
+            event.preventDefault(); // Evitar o envio do formulário
+
+            // Coletando os dados do formulário
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const endereco = document.getElementById('endereco').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            // Criando o objeto cliente
+            const cliente = {
+                nome: nome,
+                cpf: cpf,
+                dataNascimento: dataNascimento,
+                endereco: endereco,
+                whatsapp: whatsapp
+            };
+
+            // Verificar se já existe dados no LocalStorage
+            let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+
+            // Adicionar o novo cliente ao array
+            clientes.push(cliente);
+
+            // Armazenar os dados de volta no LocalStorage
+            localStorage.setItem('clientes', JSON.stringify(clientes));
+
+            // Limpar o formulário
+            document.getElementById('formCadastro').reset();
+
+            // Exibir uma mensagem de sucesso
+            alert('Cliente cadastrado com sucesso!');
+        }
+
+        // Função de máscara para CPF
+        function mascaraCPF(event) {
+            let valor = event.target.value;
+            valor = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
+            if (valor.length <= 3) {
+                event.target.value = valor;
+            } else if (valor.length <= 6) {
+                event.target.value = valor.replace(/(\d{3})(\d{1,})/, '$1.$2');
+            } else if (valor.length <= 9) {
+                event.target.value = valor.replace(/(\d{3})(\d{3})(\d{1,})/, '$1.$2.$3');
+            } else {
+                event.target.value = valor.replace(/(\d{3})(\d{3})(\d{3})(\d{1,})/, '$1.$2.$3-$4');
+            }
+        }
+
+        // Função de máscara para WhatsApp
+        function mascaraWhatsapp(event) {
+            let valor = event.target.value;
+            valor = valor.replace(/\D/g, ''); // Remove caracteres não numéricos
+            if (valor.length <= 2) {
+                event.target.value = `(${valor}`;
+            } else if (valor.length <= 6) {
+                event.target.value = `(${valor.slice(0, 2)}) ${valor.slice(2)}`;
+            } else {
+                event.target.value = `(${valor.slice(0, 2)}) ${valor.slice(2, 7)}-${valor.slice(7, 11)}`;
+            }
+        }
+    </script>
 </body>
 </html>
